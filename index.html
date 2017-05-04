@@ -10,10 +10,13 @@
 </head>
 
 <body ng-controller="SuperHeroesController as vm">
-  <div class="heroes" ng-repeat="superhero in vm.superhero">
-    <p>{{ superhero.name }}</p>
+  <h2>Search</h2>
+  <input type="text" ng-model="vm.searchSuperhero">
+
+  <div ng-class="superhero.comic.toLowerCase()" ng-repeat="superhero in vm.superhero | filter: vm.searchSuperhero">
+    <p>{{ superhero.name }}</p><button ng-click="showHero = !showHero">View</button>
     <p>{{ superhero.comic }}</p>
-    <img src="{{ superhero.img_url }}" alt="{{ superhero.name }} photo">
+    <img src="{{ superhero.img_url }}" alt="{{ superhero.name }} photo" ng-show="showHero">
     <p>{{ superhero.number }}</p>
   </div>
 
