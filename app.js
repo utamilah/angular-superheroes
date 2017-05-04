@@ -46,6 +46,6 @@ angular
 function SuperHeroesControllerFunction () {
   this.superhero = superHeroData
   this.showHero = function(){
-    
+
   }
 }
