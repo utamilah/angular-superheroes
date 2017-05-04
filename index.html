@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="superbook">
+<html lang="en" ng-app="superhero">
 
 <head>
   <meta charset="UTF-8">
@@ -9,7 +9,13 @@
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
 </head>
 
-<body ng-controller="SuperbookController as vm">
+<body ng-controller="SuperHeroesController as vm">
+  <div class="heroes" ng-repeat="superhero in vm.superhero">
+    <p>{{ superhero.name }}</p>
+    <p>{{ superhero.comic }}</p>
+    <img src="{{ superhero.img_url }}" alt="{{ superhero.name }} photo">
+    <p>{{ superhero.number }}</p>
+  </div>
 
   <script src="app.js"></script>
 </body>

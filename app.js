@@ -1,4 +1,4 @@
-let superbookData = [
+let superHeroData = [
   {
     name: 'Batman',
     number: '555-2286',
@@ -38,7 +38,11 @@ let superbookData = [
 ]
 
 angular
-  .module('superbook', [])
-  .controller('SuperbookController', [
-    SuperbookControllerFunction
+  .module('superhero', [])
+  .controller('SuperHeroesController', [
+    SuperHeroesControllerFunction
   ])
+
+function SuperHeroesControllerFunction () {
+  this.superhero = superHeroData
+}
