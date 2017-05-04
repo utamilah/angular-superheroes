@@ -45,6 +45,12 @@ angular
 
 function SuperHeroesControllerFunction () {
   this.superhero = superHeroData
+  this.newSuperHero = {}
+  this.addHero = function(){
+    let superhero = this.newSuperHero
+    this.superhero.push(superhero)
+    this.newSuperHero = {}
+  }
   this.showHero = function(){
 
   }
