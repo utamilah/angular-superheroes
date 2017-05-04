@@ -17,3 +17,15 @@ img {
 .hero {
   width: 50%;
 }
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  float: right;
+  margin: 50px 100px 0 0;
+}
+
+form input {
+  padding-bottom: 10px;
+}
